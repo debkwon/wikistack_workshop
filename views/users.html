@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{%for user in users%}
+  <hr> 
+    <div>Author Name: <a href="/wiki/users/{{user.dataValues.id}}">{{user.dataValues.name}}</a></div>
+{% endfor %}
+{% endblock %}

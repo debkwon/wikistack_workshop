@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3>Add a Page</h3>
+  <hr>
+<!--   <form method="POST" action="/wiki/">
+ -->    
+    <!-- <div><a href="/wiki/users/{{user.id}}">{{user.name}}</a></div> -->
+    
+    <!-- <div>{{user.email}}</div> -->
+    
+    <!-- <div class="form-group"> -->
+    <!--   <label for="title" class="col-sm-2 control-label">Page Title</label>
+      <div class="col-sm-10">
+        <input name="title" type="text" class="form-control"/>
+      </div>
+    </div>
+     -->
+    <div>Page Title: {{page.title}}</div>
+    <div>Tags:
+      {% for tag in tags %}
+      <ul>
+        <li><a href="#">{{tag}}</a></li>
+      </ul>
+      {% endfor %}
+    </div>
+    <div>{{page.content}}</div>
+    
+    <div>{{page.status}}</div>
+
+ <!--    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">submit</button>
+    </div> -->
+  
+  <!-- </form> -->
+{% endblock %}

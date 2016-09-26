@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <hr> 
+  <div>Author Name: {{authorName}}</div>
+  <div>Author Email: {{authorEmail}}</div>
+  {%for article in articles%}
+  <ul>
+    <li><a href="/wiki/{{article.dataValues.urlTitle}}">{{article.dataValues.title}}</a></li>
+  </ul>
+{% endfor %}
+{% endblock %}
